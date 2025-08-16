@@ -59,8 +59,9 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi', 'sans']
+				sans: ['Geist', ...fontFamily.sans],
+				satoshi: ['Satoshi', 'sans'],
+      			geist: ['Geist', 'sans-serif']
 			}
 		}
 	}

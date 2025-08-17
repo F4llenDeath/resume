@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string
+	authors: string
+	venue: string
+	href?: string
+	class?: string
+}
+
+const { title, authors, venue, href, class: className } = Astro.props
+---
+
+{href ? (
+	<a
+		href={href}
+		class='relative rounded-2xl border border-border bg-primary-foreground px-5 py-3 transition-all hover:border-foreground/25 hover:shadow-sm'
+	>
+		<article class={`flex flex-col gap-1 ${className ?? ''}`}>
+			<h3 class='font-medium'>{title}</h3>
+			<p class='text-sm text-muted-foreground'>{authors}</p>
+			<p class='text-sm italic text-muted-foreground'>{venue}</p>
+		</article>
+	</a>
+) : (
+	<div class='relative rounded-2xl border border-border bg-primary-foreground px-5 py-3'>
+		<article class={`flex flex-col gap-1 ${className ?? ''}`}>
+			<h3 class='font-medium'>{title}</h3>
+			<p class='text-sm text-muted-foreground'>{authors}</p>
+			<p class='text-sm italic text-muted-foreground'>{venue}</p>
+		</article>
+	</div>
+)}

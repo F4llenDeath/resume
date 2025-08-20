@@ -1,13 +1,12 @@
 ---
-interface Props {
-	title: string
-	authors: string
-	venue: string
-	href?: string
-	class?: string
-}
+	interface Props {
+		title: string
+		venue: string
+		href?: string
+		class?: string
+	}
 
-const { title, authors, venue, href, class: className } = Astro.props
+	const { title, venue, href, class: className } = Astro.props
 ---
 
 {href ? (
@@ -17,16 +16,16 @@ const { title, authors, venue, href, class: className } = Astro.props
 	>
 		<article class={`flex flex-col gap-1 ${className ?? ''}`}>
 			<h3 class='font-medium'>{title}</h3>
-			<p class='text-sm text-muted-foreground'>{authors}</p>
+			<slot />
 			<p class='text-sm italic text-muted-foreground'>{venue}</p>
 		</article>
 	</a>
 ) : (
 	<div class='relative rounded-2xl border border-border bg-primary-foreground px-5 py-3'>
-		<article class={`flex flex-col gap-1 ${className ?? ''}`}>
-			<h3 class='font-medium'>{title}</h3>
-			<p class='text-sm text-muted-foreground'>{authors}</p>
-			<p class='text-sm italic text-muted-foreground'>{venue}</p>
-		</article>
+			<article class={`flex flex-col gap-1 ${className ?? ''}`}>
+				<h3 class='font-medium'>{title}</h3>
+				<slot />
+				<p class='text-sm italic text-muted-foreground'>{venue}</p>
+			</article>
 	</div>
 )}

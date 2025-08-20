@@ -2,7 +2,6 @@
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/Section.astro'
 import Card from '../components/Card.astro'
-import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 
@@ -11,9 +10,8 @@ import portrait from '../assets/portrait.png'
 import PublicationCard from '../components/PublicationCard.astro'
 
 const languages = ['English', 'Chinese']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const wetlab = ['molecular cloning', 'bacterial culture', 'protein expression, purification, and characterization', 'cell culture', 'in vivo tumor modeling', 'fluorescence-based assays and imaging']
+const drylab = ['Python', 'Matlab', 'Java', 'Bash', 'DevOps', 'BioRender', 'Photoshop', 'Lightroom']
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -127,93 +125,112 @@ const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
 
 		<Section title='Experience'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				heading='Student Researcher'
+				subheading='Hu CIPT Lab, University of Wisconsin-Madison'
+				date='Mar 2024 - Oct 2025'
+				imagePath='/src/assets/uw.png'
+				altText=''
+				imageClass='h-12 w-auto md:-left-[3.75rem]'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-						<ul>
-							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-						</ul>
+						Conducted research on programmable immunoprobiotics, splittable bio-systems, personalized cancer vaccines, and checkpoint-blockade immunotherapy.
+					</li>
+					<li>
+						Performed cell culture and in vivo experiments, including tumor modeling and resection, IVIS imaging, and protein immunoassays.
+					</li>
+					<li>
+						Managed data analysis and figure production, and contributed to multiple publications.
 					</li>
 				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Student Researcher'
+				subheading='Nanjing Medical University'
+				date='May 2022 - Aug 2025'
+				imagePath='/src/assets/njmu.png'
+				altText=''
 				imageClass='h-12 w-auto md:-left-16'
-			/>
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Conducted research with graduate students, contributed to a multi-year project focused on discovering PSD95–nNOS uncoupling agents for stroke and neurodegenerative disease treatment.
+					</li>
+					<li>
+						Gained experience in bioconjugation chemistry, protein production workflows, and fluorescence-based assays.
+					</li>
+					<li>
+						Supported the preparation of multiple publications, including experimental design, data analysis, figure generation, and revision responses.
+					</li>
+				</ul>
+			</Card>
+			<Card
+				heading='Research Intern'
+				subheading='Suzhou Curemed Biopharma Technology'
+				date='Jul 2025'
+				imagePath='/src/assets/curemed.png'
+				altText=''
+				imageClass='h-5 w-auto md:-left-[4.5rem]'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Worked as a student research intern at a company producing purified mRNA and protein, participating in the full production workflow.
+					</li>
+					<li>
+						Learned and applied molecular cloning, protein expression, and multiple protein purification methods, including Ni-NTA affinity, ion exchange, hydrophobic interaction, and size-exclusion chromatography.
+					<li>
+						Verified product quality using SDS-PAGE, Western blot, and Coomassie staining; maintained sterile techniques for bacterial culture and transformation.
+					</li>
+				</ul>
+			</Card>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading='University of Wisconsin-Madison'
+				subheading='B.S., Biomedical Engineering, Certificate in Computer Science'
+				date='Sept 2023 - May 2027'
+				imagePath='/src/assets/uw.png'
 				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-						<ul>
-							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-						</ul>
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				imageClass='h-12 w-auto md:-left-[3.75rem]'
 			/>
 		</Section>
 
 		<Section title='Publications'>
 			<PublicationCard
-				title='A Novel Method for X'
-				authors='X. Yang, Y. Doe'
-				venue='ICML 2025'
-				href='https://example.com/paper1'
-			/>
+				title='Programmable immunoprobiotics orchestrate antitumor immune response with Pin1 inhibition for pancreatic cancer treatment'
+				venue='Proceedings of the National Academy of Sciences 2025'
+				href='https://doi.org/10.1073/pnas.2507711122'
+			>
+				<p class="text-sm text-muted-foreground">Yuan, S., <span style="color:#111; font-weight:575">Yang, X.</span>, Bremmer, A. M., Wang, Y., Li, S., Chen, Y., You, Y., & Hu, Q.</p>
+			</PublicationCard>
 			<PublicationCard
-				title='Another Insightful Study'
-				authors='X. Yang'
-				venue='NeurIPS 2024'
-			/>
+				title='One-stone-four-birds strategy to construct magnetic mesoporous nano-ratio fluorescence sensor for efficient discovery of PSD95-nNOS uncouplers'
+				venue='Chemical Engineering Journal 2025'
+				href='https://doi.org/10.1016/j.cej.2025.161330'
+			>
+				<p class="text-sm text-muted-foreground">Peng, T., Lu, X., Jin, Y., <span style="color:#111; font-weight:575">Yang, X.</span>, Liu, Q., Chen, C., Zhou, W., Guo, Y., Zhang, Y., Gao, Y., Zhang, H., He, H., & Chen, L.</p>
+			</PublicationCard>
+			<PublicationCard
+				title='Splittable systems in biomedical applications'
+				venue='Biomaterials Science 2024'
+				href='https://doi.org/10.1039/d4bm00709c'
+			>
+				<p class="text-sm text-muted-foreground">Yuan, S., Bremmer, A., <span style="color:#111; font-weight:575">Yang, X.</span>, Li, J., & Hu, Q.</p>
+			</PublicationCard>
+			<PublicationCard
+				title='Engineering pyroptotic vesicles as personalized cancer vaccines'
+				venue='Nature Nanotechnology 2025'
+				href='https://doi.org/10.1038/s41565-025-01931-2'
+			>
+				<p class="text-sm text-muted-foreground">Li, Z., Wang, Y., Mo, F., Wolter, T., Hong, R., Barrett, A., Richmond, N., Liu, F., Chen, Y., <span style="color:#111; font-weight:575">Yang, X.</span>, Dempsey, L., & Hu, Q.</p>
+			</PublicationCard>
 		</Section>
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='Wet Lab' skills={wetlab} />
+			<SkillLayout title='Dry Lab' skills={drylab} />
 		</Section>
 	</div>
-	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-	>
-		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-		</span>
-		<p class='font-medium'>Get free template</p>
-	</a>
 </PageLayout>
